@@ -38,6 +38,8 @@ class testController extends Controller
         ]);
 
         tests::create($formField);
+
+        return redirect('');
     }
 
     public function show_edit(){

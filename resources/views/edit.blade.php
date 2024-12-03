@@ -16,21 +16,33 @@
             <div class="mb-3">
                 <label for="name" class="form-label">Merchant Name:</label>
                 <input type="text" class="form-control" id="name" name="meter_name" placeholder="{{ $content->meter_name }}" required>
+                @error('meter_name')
+                    <p class="text-primary">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="mb-3">
                 <label for="email" class="form-label">Address</label>
                 <input type="text" class="form-control" name="address" placeholder="{{ $content->address }}"   required>
+                @error('address')
+                    <p class="text-primary">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="mb-3">
                 <label for="message" class="form-label">Meter Token</label>
                 <input type="number" class="form-control"  name="meter_token" placeholder="{{ $content->meter_token }}"  required>
+                @error('meter_token')
+                <p class="text-primary">{{ $message }}</p>
+                @enderror
             </div>
 
             <div class="mb-3">
                 <label for="message" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="{{ $content->email }}" required>
+                @error('email')
+                <p class="text-primary">{{ $message }}</p>
+                @enderror
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
